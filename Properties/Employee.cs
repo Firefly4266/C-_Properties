@@ -26,7 +26,7 @@ namespace Properties
         {
             get
             {
-                return hireDate.;
+                return hireDate;
             }
             set
             {
