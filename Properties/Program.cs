@@ -18,11 +18,13 @@ namespace Properties
             employee.EmployeeName = newEmployee;
 
             Console.Write("\n Please enter a start date: ");
-            employee.HireDate = DateTime.Parse(Console.ReadLine());
+            DateTime hireDate = DateTime.Parse(Console.ReadLine());
+            employee.HireDate = hireDate;
 
+            employee.GetDateTime();
 
             /*Console.WriteLine($"\n Employee Name: {employee.EmployeeName}");*/ //Testing outupt
-            //Console.WriteLine($"\n Employee Start Date: {employee.HireDate}\n"); //Testing outupt
+            Console.WriteLine($"\n Employee Start Date: {employee.HireDate}\n"); //Testing outupt
         }
     }
 }

@@ -11,27 +11,14 @@ namespace Properties
         private DateTime hireDate;
         private string employeeName;
 
-        public string EmployeeName
+        public string EmployeeName { get; set; }
+        public DateTime HireDate { get; set; }
+
+        public TimeSpan GetDateTime()
         {
-            get
-            {
-                return employeeName;
-            }
-            set
-            {
-                this.employeeName = value;
-            }
-        }
-        public DateTime HireDate
-        {
-            get
-            {
-                return hireDate;
-            }
-            set
-            {
-                hireDate = value;
-            }
+            TimeSpan timeAtCompany = (DateTime.Now - HireDate);
+            Console.WriteLine($"\n This employee has worked for the company {timeAtCompany.Days} days.\n");
+            return timeAtCompany;
         }
     }
 }
